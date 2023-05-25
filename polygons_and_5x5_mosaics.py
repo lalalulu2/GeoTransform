@@ -6,6 +6,7 @@ and creating 5x5 mosaics from multiple image Ids.
 import os
 import pandas
 import numpy as np 
+import tensorflow as tf
 import scipy.misc
 from PIL import Image
 
