@@ -1,3 +1,8 @@
+"""
+Script for plotting training label polygons over satellite images
+and creating 5x5 mosaics from multiple image Ids. 
+"""
+
 import os
 import pandas
 import numpy as np 
