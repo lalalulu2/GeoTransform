@@ -2,11 +2,11 @@ import os
 from PIL import Image
 import tensorflow as tf
 
-tiff_folder = 'путь_к_папке_tiff'
+tiff_folder = ''
 
-jpg_folder = 'путь_к_папке_jpg'
+jpg_folder = ''
 
-model = tf.keras.models.load_model('путь_к_обученной_модели')
+model = tf.keras.models.load_model('')
 
 for filename in os.listdir(tiff_folder):
     if filename.endswith('.tiff'):
