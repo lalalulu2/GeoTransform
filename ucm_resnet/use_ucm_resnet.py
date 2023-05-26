@@ -1,7 +1,26 @@
+import os
+from PIL import Image
 import tensorflow as tf
 
-model = tf.keras.models.load_model('resnet_model.hdf5')
+tiff_folder = 'путь_к_папке_tiff'
 
-preprocessed_data = preprocess_data(input_data)
+jpg_folder = 'путь_к_папке_jpg'
 
-predictions = model.predict(preprocessed_data)
+model = tf.keras.models.load_model('путь_к_обученной_модели')
+
+for filename in os.listdir(tiff_folder):
+    if filename.endswith('.tiff'):
+       
+        tiff_path = os.path.join(tiff_folder, filename)
+        
+        image = Image.open(tiff_path)
+        
+        jpg_image = image.convert('RGB')
+        
+        jpg_path = os.path.join(jpg_folder, f'{os.path.splitext(filename)[0]}.jpg')
+        
+        jpg_image.save(jpg_path)
+
+        predictions = model.predict(preprocessed_image)
+        
+
