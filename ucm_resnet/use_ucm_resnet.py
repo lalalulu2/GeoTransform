@@ -6,7 +6,7 @@ tiff_folder = ''
 
 jpg_folder = ''
 
-model = tf.keras.models.load_model('')
+model = tf.keras.models.load_model('resnet_model.hdf5')
 
 for filename in os.listdir(tiff_folder):
     if filename.endswith('.tiff'):
