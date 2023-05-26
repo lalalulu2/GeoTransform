@@ -1,8 +1,6 @@
 import tensorflow as tf
 
-loaded_model = tf.keras.models.load_model('')
-
-model = loaded_model
+model = tf.keras.models.load_model('resnet_model.hdf5')
 
 preprocessed_data = preprocess_data(input_data)
 
